@@ -24,8 +24,8 @@ Route::get('posts', function () {
             ->get();
 
     return view('posts', compact('posts'));
-});
+})->name('show-posts');
 
 Route::get('posts/{post:slug}', function (Post $post) {
     return view('post', compact('post'));
-});
+})->name('show-post');
